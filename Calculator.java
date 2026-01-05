@@ -10,7 +10,7 @@ public class Calculator {
     int boardWidth = 400;
     int boardheight = 600;
 
-    // Color palette (gruvbox-like)
+    // Color palette (gruvbox)
     Color customLightGray = new Color(189, 174, 147);  
     Color customDarkgray = new Color(50, 48, 47);      
     Color customBlack = new Color(40, 40, 40);         
@@ -161,7 +161,8 @@ public class Calculator {
                             double asqrt = Double.parseDouble(displayLabel.getText());
                                 if (asqrt < 0) displayLabel.setText("null");
                                 else {
-                                    asqrt = Math.sqrt(asqrt);                                        displayLabel.setText(removeDecimal(asqrt));
+                                    asqrt = Math.sqrt(asqrt);                                        
+                                    displayLabel.setText(removeDecimal(asqrt));
                                 }
                         }
                         else if ("0123456789".contains(buttonValue)) {
@@ -192,5 +193,6 @@ public class Calculator {
     // we need components to display on the window, we will need 2 here, one for the buttons (numbers + operators) and one for displaying calculations
 
 }
+
 
 
